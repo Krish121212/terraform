@@ -2,13 +2,12 @@ resource "aws_instance" "Expense" {
   count = length(var.instance_names)
   ami = var.image_id
   vpc_security_group_ids = [ aws_security_group.allow-ssh.id ]
-  instance_type = local.instance_type
+  instance_type = var.instance_names[count.index] == "db_practice" ? "t2.small" : "t2.micro"
   
   tags = merge(
     var.tags_Expense,
     {
       Name = var.instance_names[count.index]
-      Module = var.instance_names[count.index]
     }
   )
 }
