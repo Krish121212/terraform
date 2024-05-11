@@ -1,6 +1,6 @@
 #first preference = command line
 #2. tfvars
-#3. environment variable
+#3. environment variable = export -----
 #4. default variables 
 resource "aws_instance" "db" {
 
