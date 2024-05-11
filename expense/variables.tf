@@ -1,3 +1,4 @@
+#ec2 variables
 variable "image_id" {
   type = string #optional
   default = "ami-090252cbe067a9e58" #optional
@@ -17,6 +18,7 @@ variable "tags_Expense" {
     }  
 }
 
+#security variables
 variable "sg_ssh" {
     default = "allow-ssh"
 }
@@ -42,4 +44,13 @@ variable "protocol" {
 
 variable "cidr" {
   default = ["0.0.0.0/0"]
+}
+
+#r53 variables
+variable "zone_id" {
+  default = "Z100663530MNTX07G8NYH"
+}
+
+variable "domain_name" {
+  default = "devopskk.online"
 }
