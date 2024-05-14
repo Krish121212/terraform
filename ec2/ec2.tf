@@ -14,6 +14,7 @@ resource "aws_security_group" "allow-ssh" {
     name = "allow-ssh"
     description = "Allow ssh inbound traffic and all outbound traffic"
 
+#below is terraform block as there is no equalto 
     ingress {
     from_port        = 22
     to_port          = 22
@@ -28,6 +29,7 @@ resource "aws_security_group" "allow-ssh" {
     cidr_blocks      = ["0.0.0.0/0"]
   }
 
+#below is terraform map as there is equalto,also list means [1, 2, 3, 4]
     tags = { 
         Name = "allow-ssh"
         createdby = "Krishna"
