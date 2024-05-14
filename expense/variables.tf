@@ -13,7 +13,7 @@ variable "instance_names" {
 variable "tags_Expense" {
     default =  {
         project = "Expense"
-        Name = "db"
+        Name = "db_practice"
         Environment = "dev"
     }  
 }

@@ -1,4 +1,4 @@
-#first preference = command line
+#1. preference = command line
 #2. tfvars
 #3. environment variable = export -----
 #4. default variables 
