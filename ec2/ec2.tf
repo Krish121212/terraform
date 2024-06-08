@@ -1,7 +1,6 @@
-
 resource "aws_instance" "db" {
 
-  ami = "ami-090252cbe067a9e58"
+  ami = "ami-031d574cddc5bb371"
   vpc_security_group_ids = [ aws_security_group.allow-ssh.id ]
   instance_type = "t2.micro"
   
